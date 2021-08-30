@@ -2,6 +2,17 @@ main {
   padding: 20px 0;
 }
 
+body {
+  background-color: red;
+}
+
+/* This applies from 600px and larger */
+@media all and (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+}
+
 section {
   margin-bottom: 100px;
 }
@@ -24,7 +35,7 @@ h3 {
 
 .group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 100px;
 }
 
@@ -35,4 +46,15 @@ h3 {
 
 .item-double {
   flex: 2;
+}
+
+@media all and (min-width: 800px) {
+  section,
+  h1 {
+    padding: 0 10%;
+  }
+
+  .group {
+    flex-direction: row;
+  }
 }
